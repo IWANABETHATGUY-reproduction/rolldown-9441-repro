@@ -1,0 +1,12 @@
+{
+  "name": "rolldown-9441-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:bad": "vite build --ssr src/entry.js --outDir dist-bad",
+    "build:good": "VITE_OVERRIDE=1 vite build --ssr src/entry.js --outDir dist-good"
+  },
+  "devDependencies": {
+    "vite": "^8.0.12"
+  }
+}
