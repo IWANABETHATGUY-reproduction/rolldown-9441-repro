@@ -1,12 +1,18 @@
 {
   "name": "rolldown-9441-repro",
   "private": true,
-  "type": "module",
   "scripts": {
     "build:bad": "vite build --ssr src/entry.js --outDir dist-bad",
-    "build:good": "VITE_OVERRIDE=1 vite build --ssr src/entry.js --outDir dist-good"
+    "build:good": "VITE_OVERRIDE=1 vite build --ssr src/entry.js --outDir dist-good",
+    "build:rolldown": "node rolldown.config.mjs",
+    "build:rollup": "node rollup.config.mjs"
   },
   "devDependencies": {
-    "vite": "^8.0.12"
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-node-resolve": "latest",
+    "rollup": "latest",
+    "rolldown": "latest"
+  },
+  "resolutions": {
   }
 }
